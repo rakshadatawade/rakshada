@@ -1,0 +1,338 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.navbar
+{
+  background-color:lightblue;
+  float:none;
+  text-align:right;
+  padding: 10px 14px;
+  font-size: 19px;
+}
+.profile {
+  display:flow-root;
+  align-items:normal; 
+  padding: 10px;
+  margin: 10px;
+  background:wheat;
+  border-radius:1px;
+  box-shadow: 0 2px 5px rgba(218, 19, 19, 0.1);
+  
+
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;  
+  border-radius: 25px; 
+  margin-left: 100px;
+  padding-bottom: 20px;
+}
+
+.profile-text {
+  flex: 1;
+  text-align:center;
+padding: 2.5px;
+  
+}
+
+.profile-text h2 {
+  margin: 0 0 10px;
+
+ }
+
+.icon {
+  height: 400%;
+  position:absolute;
+  right:0px;
+  clip-path: circle(90%);
+}
+.certificate-section {
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.certificate-section h2 {
+  text-align: center;
+  color: #333;
+}
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  
+}
+.certificates-container .certificate-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificates-container .certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.certificate-card  img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.certificate-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.certificate-issuer {
+  color: #777;
+  margin-bottom: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s;
+}
+.modal-content  .modal-close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+}
+.modal-content  .modal-close:hover {
+  color: #333;
+}
+.modal-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.modal-issuer,
+.modal-skills {
+  margin-bottom: 10px;
+  color: #555;
+}
+.skill-section {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
+  overflow: hidden;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.skill-container {
+  color: var(--background-color);
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.skill-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding-right: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.skill-card ul {
+  list-style: none;
+  color: var(--background-color);
+}
+
+.skill-card li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+
+.skill-card img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .skill-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .skill-card {
+      width: 90%;
+  }
+}
+.about {
+  padding: 60px 20px;
+  margin: 20px 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 0px 0px 0px;
+  border: 2px solid #972ea9;
+  border-radius: 1rem;
+  margin: auto;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius:50%; ;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.about-content h2 {
+  color: #35424a;
+}
+
+.about-content p {
+  margin: 10px 0;
+}
+
+
+.contact-form-container {
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid white;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  background-color: var(--background-color);
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.input-group input {
+  width: 48%;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form .submit-btn {
+  background-color: #001f54;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #00307d;
+}
+
+.call-us {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+      flex-direction: column;
+  }
+
+  .input-group input {
+      width: 100%;
+  }
+}
+footer
+{
+    background-color: #F08080;
+    align-items:stretch;
+    padding: 10px 500px;
+
+}
